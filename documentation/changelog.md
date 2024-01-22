@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.3 - Initialize Prisma.
+- Installed and Initialized Prisma.
+- Priorly Download and setup mysql community server + (workbench or datagrid from jetbrains) for gui db.
+
 > 1.0.2 - Added Navbar Component.
 - Added Navbar Component.
 - Seperated components.
