@@ -1,5 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.4 - configured Prisma.
+- updated the db url and prisma configuration.
+- updated the gitignore file.
+- saved db config somewhere safe XD
+
 > 1.0.3 - Initialize Prisma.
 - Installed and Initialized Prisma.
 - Priorly Download and setup mysql community server + (workbench or datagrid from jetbrains) for gui db.
