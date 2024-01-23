@@ -1,5 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.7 - Installing and configuring radix ui.
+- installed radix ui lib.
+- added imports in layout.tsx(root).
+- wrapped the whole body of the project with its inbuilt theme wrapper component.
+
 > 1.0.6 - Creating API for new Issue creation.
 - Created post api to create a new issue.
 - installed prisma/client and configured its client to avoid running multiple instances of prisma at the same time. by following the official documentation.
