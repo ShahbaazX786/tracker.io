@@ -1,5 +1,7 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.1.0 - Replacing the textarea input with a popular markdown edior lib.
+
 > 1.0.9 - Configuring theme & fonts for radix ui.
 - updated theme.
 - updated font config.
