@@ -1,5 +1,7 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.8 - Created Create new issue page.
+
 > 1.0.7 - Installing and configuring radix ui.
 - installed radix ui lib.
 - added imports in layout.tsx(root).
