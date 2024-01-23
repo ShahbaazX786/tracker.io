@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.1.1 - Handling form data.
+- Installed react hook forms to handle forms.
+- Installed axios to make requests to backend api.
+
 > 1.1.0 - Replacing the textarea input with a popular markdown edior lib.
 
 > 1.0.9 - Configuring theme & fonts for radix ui.
