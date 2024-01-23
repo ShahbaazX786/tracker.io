@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.9 - Configuring theme & fonts for radix ui.
+- updated theme.
+- updated font config.
+
 > 1.0.8 - Created Create new issue page.
 
 > 1.0.7 - Installing and configuring radix ui.
