@@ -1,5 +1,13 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.5 - Migrated Prisma.
+- Created issue model in prisma.schema file.
+- Created a enum to support custom data type for status in issue model.(enums are supported in mysql may not be supported in other dbs).
+- formatted the file using *npx prisma format.*
+- opened the mysql cli and connected using pasword. then ran the prisma migrate command *npx prisma migrate dev*.
+- then opened the datagrip software and created a new datasource(steps are pretty simple.)
+## Note: Make sure to download the drivers if prompted. Also make sure to click on the test connection button to make sure the mysql server is online in local.
+
 > 1.0.4 - configured Prisma.
 - updated the db url and prisma configuration.
 - updated the gitignore file.
