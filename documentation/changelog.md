@@ -1,5 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.0.6 - Creating API for new Issue creation.
+- Created post api to create a new issue.
+- installed prisma/client and configured its client to avoid running multiple instances of prisma at the same time. by following the official documentation.
+- installed and configured zod to validate the request according to schema.
+
 > 1.0.5 - Migrated Prisma.
 - Created issue model in prisma.schema file.
 - Created a enum to support custom data type for status in issue model.(enums are supported in mysql may not be supported in other dbs).
