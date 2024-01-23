@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.1.2 - Handling form errors.
+- Formatted error messages in api response.
+- Used callout element to show alert in ui.
+
 > 1.1.1 - Handling form data.
 - Installed react hook forms to handle forms.
 - Installed axios to make requests to backend api.
