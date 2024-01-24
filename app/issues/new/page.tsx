@@ -25,6 +25,18 @@ const CreateNewIssue = () => {
     const { register, control, handleSubmit, formState: { errors } } = useForm<IssueForm>({
         resolver: zodResolver(createIssueSchema)
     });
+    const submitIssue = handleSubmit(async (data) => {
+            try {
+                setIsSubmitting(true);
+                await axios.post('/api/issues', data);
+                setIsSubmitting(false);
+                router.push('/issues');
+            } catch (error) {
+                setIsSubmitting(false)
+                setError('An Unexpected error occurred, Kindly Try Again.');
+            }
+        }
+    )
 
     return (
         <div className='max-w-2xl h-full border mx-auto my-auto mt-5 p-6 rounded-md shadow-md'>
@@ -36,20 +48,7 @@ const CreateNewIssue = () => {
                     <Callout.Text>{error}</Callout.Text>
                 </Callout.Root>)}
             <form
-                onSubmit={
-                    handleSubmit(
-                        async (data) => {
-                            try {
-                                setIsSubmitting(true);
-                                await axios.post('/api/issues', data);
-                                setIsSubmitting(false);
-                                router.push('/issues');
-                            } catch (error) {
-                                setIsSubmitting(false)
-                                setError('An Unexpected error occurred, Kindly Try Again.');
-                            }
-                        }
-                    )}>
+                onSubmit={submitIssue}>
                 <Heading className='py-4'>Create a new issue</Heading>
                 <div className='space-y-5'>
                     <TextField.Root>
