@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.1.4 - Refactoring
+- Refactored error message logic to a whole new component for code tidyness.
+- Used optional chaining for error messages.
+
 > 1.1.3 - Adding client side form validation.
 - Installed and configured @hookform/resolvers package to utilize it with hook forms using zodresolver.
 - refactored the code a lil bit and moved the schema to a separate file.
