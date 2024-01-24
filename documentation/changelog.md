@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+
+> 1.1.7 - Implementation of Issues Page.
+- Added a issues table page for viewing all existing issues.
+
 > 1.1.6 - Refactoring #2
 - Move the inline js method to a separate function.
 
