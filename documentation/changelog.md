@@ -1,5 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 1.1.5 - Adding a spinner.
+- Created a cool reusable spinner component.
+- Utilized it on the submit button using usestate to render / hide the spinner.
+
 > 1.1.4 - Refactoring
 - Refactored error message logic to a whole new component for code tidyness.
 - Used optional chaining for error messages.
