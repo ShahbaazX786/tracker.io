@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.1.8 - Implementation of Issue Status Badge.
+- Utilized radix ui's badge component to reuse it based on status of the badge.
+- Used a Record data type to store the type of key/value for the badge.
+
 > 1.1.7 - Implementation of Issues Page.
 - Added a issues table page for viewing all existing issues.
 
