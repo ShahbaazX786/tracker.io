@@ -1,25 +1,17 @@
 import React from 'react'
-import Link from "next/link";
 
 import prisma from '@/prisma/client'
-import { Button } from "@radix-ui/themes"
-import { FiPlusCircle } from "react-icons/fi";
-import { Heading, Table } from '@radix-ui/themes';
+import { Table } from '@radix-ui/themes';
 import IssueStatusBadge from '@/components/IssueStatusBadge';
+import delay from 'delay';
+import CreateActionBtn from './createActionBtn';
 
 const IssuesPage = async () => {
+  await delay(2000); 
   const issues = await prisma.issue.findMany();
   return (
     <div className='w-full h-full px-6 my-6 space-y-5'>
-      <div className='flex flex-row justify-between'>
-        <Heading>All Issues</Heading>
-        <Button>
-          <FiPlusCircle size={15} />
-          <Link href={'/issues/new'}>
-            Create Issue
-          </Link>
-        </Button>
-      </div>
+      <CreateActionBtn />
       <Table.Root variant='surface'>
         <Table.Header>
           <Table.Row>

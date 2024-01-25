@@ -1,6 +1,11 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.1.9 - Implementation of loading skeleton for issues page.
+- Installed react loading skeleton to mimic loading skeleton in loading.tsx file.
+- refactored the button create new issue button in a seperate component.
+- installed delay package in dev dependencies to test the loading skeleton.
+
 > 1.1.8 - Implementation of Issue Status Badge.
 - Utilized radix ui's badge component to reuse it based on status of the badge.
 - Used a Record data type to store the type of key/value for the badge.
