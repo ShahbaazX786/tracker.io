@@ -1,6 +1,6 @@
 "use client"
 
-import { createIssueSchema } from '@/app/validationSchemas';
+import { IssueSchema } from '@/app/validationSchemas';
 import { ErrorMessage, Spinner } from '@/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Issue } from '@prisma/client';
@@ -20,21 +20,25 @@ const SimpleMDE = dynamic(
     { ssr: false }
 );
 
-type IssueFormData = z.infer<typeof createIssueSchema>;
+type IssueFormData = z.infer<typeof IssueSchema>;
 
 const IssueForm = ({ issue }: { issue?: Issue }) => {
     const router = useRouter();
     const [error, setError] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const { register, control, handleSubmit, formState: { errors } } = useForm<IssueFormData>({
-        resolver: zodResolver(createIssueSchema)
+        resolver: zodResolver(IssueSchema)
     });
     const submitIssue = handleSubmit(async (data) => {
         try {
             setIsSubmitting(true);
-            await axios.post('/api/issues', data);
-            setIsSubmitting(false);
-            router.push('/issues');
+            if (issue) {
+                await axios.patch('/api/issues/' + issue.id, data);
+            } else {
+                await axios.post('/api/issues', data);
+                setIsSubmitting(false);
+                router.push('/issues');
+            }
         } catch (error) {
             setIsSubmitting(false)
             setError('An Unexpected error occurred, Kindly Try Again.');
@@ -61,8 +65,8 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
                     <Controller name='description' control={control} defaultValue={issue?.description} render={({ field }) =>
                         <SimpleMDE placeholder='Description' {...field} />} />
                     <ErrorMessage >{errors.description?.message}</ErrorMessage>
-                    <Button>
-                        Submit
+                    <Button disabled={isSubmitting}>
+                        {issue ? 'Update Issue' : 'Submit Issue'}
                         {isSubmitting ? <Spinner /> : <FaArrowRight />}
                     </Button>
                 </div>

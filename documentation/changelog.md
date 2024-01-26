@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.3.0 - Implemented EditIssue logic aswell.
+
 > 1.2.9 - Implemented EditIssue PATCH API.
 - Tested in thunderclient.
 
