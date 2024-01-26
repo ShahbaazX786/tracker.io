@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.2 - Added styling for Title in issue Detail page.
+- Though i could have done it with tailwind css easily but to ensure that the style changes automatically in respect to theme i had to create a styled component.
+- This styled component utilizes both Link from nextjs and Link from radixui to make it a simple link with text component.
+
 > 1.2.1 - Added Markdown preview support in issueDetail page.
 - installed and used react-markdown package.
 - installed and configured tailwindcss/typography as plugin.
