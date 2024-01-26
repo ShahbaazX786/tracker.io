@@ -1,8 +1,6 @@
-import React from 'react'
+import { Skeleton } from '@/components';
 import { Table } from '@radix-ui/themes';
-import Skeleton from 'react-loading-skeleton'
-import CreateActionBtn  from './createActionBtn';
-import 'react-loading-skeleton/dist/skeleton.css'
+import CreateActionBtn from "./createActionBtn";
 
 const IssueLoadingSkeleton = () => {
     const issues = [1, 2, 3, 4, 5];

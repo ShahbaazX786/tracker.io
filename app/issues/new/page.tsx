@@ -1,19 +1,18 @@
 "use client"
 
-import React, { useState } from 'react'
+import { createIssueSchema } from '@/app/validationSchemas';
+import { ErrorMessage, Spinner } from '@/components';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Button, Callout, Heading, TextField } from "@radix-ui/themes";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
 import { FaArrowRight } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
-import { Button, Callout, Heading, TextField } from "@radix-ui/themes";
-import "easymde/dist/easymde.min.css";
-import { useForm, Controller } from 'react-hook-form';
-import axios from "axios";
-import { useRouter } from 'next/navigation';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { createIssueSchema } from '@/app/validationSchemas';
 import { z } from 'zod';
-import ErrorMessage from '@/components/ErrorMessage';
-import Spinner from '@/components/Spinner';
+import axios from "axios";
 import dynamic from 'next/dynamic';
+import "easymde/dist/easymde.min.css";
 
 const SimpleMDE = dynamic(
     () => import('react-simplemde-editor'),

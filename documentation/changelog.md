@@ -1,6 +1,12 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.5 - Refactoring #3 : Organizing imports.
+- Created a new file index.ts to simplify imports.
+- Created a new file skeleton.ts to simplify skeleton imports.
+- Organized new imports.
+- Removed unnecessary imports from all files.
+
 > 1.2.4 - Disabling the SSR.
 - Disabling the server side rendering for a specific component import to avoid hydration error even though we used *use client*.
 - by using dynamic import we can provide the option to disable ssr:false. and this will ensure that the component will where this is being imported will not be rendered on server.

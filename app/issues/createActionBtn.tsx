@@ -1,6 +1,5 @@
-import { Heading, Button } from '@radix-ui/themes';
 import Link from 'next/link';
-import React from 'react'
+import { Button, Heading } from '@radix-ui/themes';
 import { FiPlusCircle } from 'react-icons/fi';
 
 const CreateActionBtn = () => {
