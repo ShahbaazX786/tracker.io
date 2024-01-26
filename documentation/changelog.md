@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.3 - Added Loading skeleton for NewIssuePage & NewIssueDetailPage.
+
 > 1.2.2 - Added styling for Title in issue Detail page.
 - Though i could have done it with tailwind css easily but to ensure that the style changes automatically in respect to theme i had to create a styled component.
 - This styled component utilizes both Link from nextjs and Link from radixui to make it a simple link with text component.

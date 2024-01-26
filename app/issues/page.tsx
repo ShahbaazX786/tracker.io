@@ -3,12 +3,10 @@ import React from 'react'
 import prisma from '@/prisma/client'
 import { Table } from '@radix-ui/themes';
 import IssueStatusBadge from '@/components/IssueStatusBadge';
-import delay from 'delay';
 import CreateActionBtn from './createActionBtn';
 import Link from '@/components/Link';
 
 const IssuesPage = async () => {
-  await delay(2000);
   const issues = await prisma.issue.findMany();
   return (
     <div className='w-full h-full px-6 my-6 space-y-5'>
