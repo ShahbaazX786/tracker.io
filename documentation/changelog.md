@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.4 - Disabling the SSR.
+- Disabling the server side rendering for a specific component import to avoid hydration error even though we used *use client*.
+- by using dynamic import we can provide the option to disable ssr:false. and this will ensure that the component will where this is being imported will not be rendered on server.
+
 > 1.2.3 - Added Loading skeleton for NewIssuePage & NewIssueDetailPage.
 
 > 1.2.2 - Added styling for Title in issue Detail page.

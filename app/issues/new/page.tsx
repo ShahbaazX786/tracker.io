@@ -3,9 +3,7 @@
 import React, { useState } from 'react'
 import { FaArrowRight } from "react-icons/fa";
 import { GoAlertFill } from "react-icons/go";
-
-import { Button, Callout, Heading, Text, TextField } from "@radix-ui/themes";
-import SimpleMDE from "react-simplemde-editor";
+import { Button, Callout, Heading, TextField } from "@radix-ui/themes";
 import "easymde/dist/easymde.min.css";
 import { useForm, Controller } from 'react-hook-form';
 import axios from "axios";
@@ -15,7 +13,12 @@ import { createIssueSchema } from '@/app/validationSchemas';
 import { z } from 'zod';
 import ErrorMessage from '@/components/ErrorMessage';
 import Spinner from '@/components/Spinner';
+import dynamic from 'next/dynamic';
 
+const SimpleMDE = dynamic(
+    () => import('react-simplemde-editor'),
+    { ssr: false }
+);
 type IssueForm = z.infer<typeof createIssueSchema>;
 
 const CreateNewIssue = () => {
@@ -26,16 +29,16 @@ const CreateNewIssue = () => {
         resolver: zodResolver(createIssueSchema)
     });
     const submitIssue = handleSubmit(async (data) => {
-            try {
-                setIsSubmitting(true);
-                await axios.post('/api/issues', data);
-                setIsSubmitting(false);
-                router.push('/issues');
-            } catch (error) {
-                setIsSubmitting(false)
-                setError('An Unexpected error occurred, Kindly Try Again.');
-            }
+        try {
+            setIsSubmitting(true);
+            await axios.post('/api/issues', data);
+            setIsSubmitting(false);
+            router.push('/issues');
+        } catch (error) {
+            setIsSubmitting(false)
+            setError('An Unexpected error occurred, Kindly Try Again.');
         }
+    }
     )
 
     return (
