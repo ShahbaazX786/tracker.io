@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.8 - Implemented EditIssue Page.
+- Refactored the issueform to an reusable component.
+- implemented edit issue page.
+
 > 1.2.7 - Refactoring #4
 - Refactored the issuepage into subcomponents to follow single responsibility principle.
 
