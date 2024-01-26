@@ -30,7 +30,7 @@ export default function RootLayout({
         {/* <Theme appearance="light" accentColor="violet" grayColor="slate" radius="full"></Theme> */}
         <Theme accentColor="violet" grayColor="slate" radius="medium">
           <Navbar />
-          <main>{children}</main>
+          <main className='mx-auto px-8 my-8'>{children}</main>
         </Theme>
       </body>
     </html>

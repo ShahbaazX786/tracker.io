@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.0 - Added IssueDetail page. And updated some layout styles.
+
 > 1.1.9 - Implementation of loading skeleton for issues page.
 - Installed react loading skeleton to mimic loading skeleton in loading.tsx file.
 - refactored the button create new issue button in a seperate component.
