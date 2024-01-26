@@ -1,6 +1,11 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.2.1 - Added Markdown preview support in issueDetail page.
+- installed and used react-markdown package.
+- installed and configured tailwindcss/typography as plugin.
+- added prose classname for parent element of react-markdown element to override the default tailwind styles for markdown elements.
+
 > 1.2.0 - Added IssueDetail page. And updated some layout styles.
 
 > 1.1.9 - Implementation of loading skeleton for issues page.

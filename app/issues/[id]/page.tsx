@@ -3,7 +3,7 @@ import prisma from '@/prisma/client'
 import { notFound } from 'next/navigation';
 import { Card, Flex, Heading, Text } from '@radix-ui/themes';
 import IssueStatusBadge from '@/components/IssueStatusBadge';
-
+import Markdown from 'react-markdown';
 interface Props {
     params: { id: string }
 }
@@ -26,8 +26,8 @@ const IssueDetailPage = async ({ params }: Props) => {
                 <IssueStatusBadge status={issueDetails.status} />
                 <Text><b>Created on: </b> {issueDetails.createdAt.toDateString()}</Text>
             </Flex>
-            <Card>
-                <p>{issueDetails.description}</p>
+            <Card className='prose mt-5'>
+                <Markdown>{issueDetails.description}</Markdown>
             </Card>
         </div>
     )
