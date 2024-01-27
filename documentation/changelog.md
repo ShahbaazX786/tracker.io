@@ -2,6 +2,11 @@
 
 
 
+> 1.3.9 - Delete btn issue improvements.
+- Adding a loader to ensure network delay in deleting.
+- overall improving UX.
+
+
 > 1.3.8 - Integrated Delete api.
 - Added Error Handling as well.
 
