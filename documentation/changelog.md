@@ -2,6 +2,16 @@
 
 
 
+> 1.4.2 - Setting Up NextAuth 2: Configuring Google Oauth Provider.
+- Went to cloud.google.com console and created a new project.
+- Then configured the *consent screen* for Oauth.
+- Then added type as *external* (for testing purposes) and scopes as *email and profile* and filled email address at few places. and added an email address for testing.
+- Then after configuring the consent screen went to creadentials and created a new *Oauth client ID* and Then went into that project and selected it as *web application*, ADDED *app name*, *added URL* (localhost:3000) and finally added *redirect URI* (http://localhost:3000/api/auth/callback/google).
+- And then finally added these in .env file.
+    - as GOOGLE_CLIENT_ID
+    - and GOOGLE_CLIENT_SECRET.
+
+
 > 1.4.1 - Setting Up NextAuth.
 - Installed NextAuth lib.
 - created a new route api/auth/[...nextauth]/route.ts [this ...nextauth route is used to handle all the nextauth related routes].
