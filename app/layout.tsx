@@ -1,4 +1,4 @@
-import { Theme } from '@radix-ui/themes';
+import { Container, Theme } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import './globals.css';
 import './theme-config.css';
@@ -30,7 +30,11 @@ export default function RootLayout({
         {/* <Theme appearance="light" accentColor="violet" grayColor="slate" radius="full"></Theme> */}
         <Theme accentColor="violet" grayColor="slate" radius="medium">
           <Navbar />
-          <main className='mx-auto px-8 my-8'>{children}</main>
+          <main className='mx-auto py-8 px-4'>
+            <Container>
+              {children}
+            </Container>
+          </main>
         </Theme>
       </body>
     </html>
