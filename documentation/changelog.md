@@ -2,6 +2,12 @@
 
 
 
+> 1.4.3 - Setting Up NextAuth 3: Prisma Adapter configuration.
+- First big blunder is i created route in *api/issues/auth*. but it should  be in *api/auth*.
+- Next installed @next-auth/prisma-adapter for nextauth. as @auth/prisma-adapter was giving out errors.
+- Then followed docs in nextauth/adapters for prisma and copied from model account to the very bottom and pasted in prisma.schema.
+- Then ran *npx migrate prisma dev* command to migrate the new prisma.schema changes to db.
+
 > 1.4.2 - Setting Up NextAuth 2: Configuring Google Oauth Provider.
 - Went to cloud.google.com console and created a new project.
 - Then configured the *consent screen* for Oauth.
