@@ -2,6 +2,10 @@
 
 
 
+> 1.4.0 - Duplicate loading skeleton fix.
+- Moved the file hierarchy so that we don't have 2 loading.tsx in same, sub hierarchy.
+
+
 > 1.3.9 - Delete btn issue improvements.
 - Adding a loader to ensure network delay in deleting.
 - overall improving UX.

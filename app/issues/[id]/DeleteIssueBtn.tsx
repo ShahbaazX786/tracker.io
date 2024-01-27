@@ -16,7 +16,7 @@ const DeleteIssueBtn = ({ issueId }: { issueId: number }) => {
         try {
             setDeleting(true);
             await axios.delete('/api/issues/' + issueId);
-            router.push('/issues');
+            router.push('/issues/list');
             router.refresh();
         } catch (error) {
             setDeleting(false);
@@ -62,7 +62,7 @@ const DeleteIssueBtn = ({ issueId }: { issueId: number }) => {
                     <AlertDialog.Title>Uh, Oh!</AlertDialog.Title>
                     <AlertDialog.Description>This Issue could not be deleted!.</AlertDialog.Description>
                     <Flex direction={'row'} gap={'4'}>
-                        <Button color='orange' variant='solid' mt={'4'} onClick={() => { setError(false); router.push('/issues') }}>Go Back</Button>
+                        <Button color='orange' variant='solid' mt={'4'} onClick={() => { setError(false); router.push('/issues/list') }}>Go Back</Button>
                         <Button color='gray' variant='soft' mt={'4'} onClick={() => setError(false)}>Okay</Button>
                     </Flex>
                 </AlertDialog.Content>

@@ -11,7 +11,7 @@ const Navbar = () => {
     const currentActivePath = usePathname();
     const menu = [
         { href: '/', label: 'Dashboard' },
-        { href: '/issues', label: 'Issues' },
+        { href: '/issues/list', label: 'Issues' },
     ]
     return (
         <nav className='flex px-5 h-14 items-center border-b justify-between shadow-sm'>

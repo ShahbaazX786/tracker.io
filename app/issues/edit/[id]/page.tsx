@@ -1,7 +1,7 @@
 import prisma from '@/prisma/client';
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
-import IssueFormSkeleton from './loading';
+import IssueFormSkeleton from '../../[id]/loading';
 
 // dynamic import of component & disabling ssr for this component & loading a custom loading page by bypassing orignal one.
 const IssueForm = dynamic(
