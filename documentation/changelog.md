@@ -1,6 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.3.6 - Added Delete btn UI and alert.
+- Utilized radix ui alert.
+
 > 1.3.5 - Bug Fixes 4 & Improvements:
 - Fixed the layout using radixui container.
 - Added DeleteIssueBtn.
