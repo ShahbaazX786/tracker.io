@@ -29,7 +29,10 @@ const IssuesPage = async () => {
         </Table.Body>
       </Table.Root>
     </div>
-  )
-}
+  );
+};
+
+// this fix is enables this file to not be a static page in prod build.
+export const dynamic = 'force-dynamic';
 
 export default IssuesPage;

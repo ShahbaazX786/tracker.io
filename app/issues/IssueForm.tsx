@@ -39,6 +39,7 @@ const IssueForm = ({ issue }: { issue?: Issue }) => {
             }
             setIsSubmitting(false);
             router.push('/issues');
+            router.refresh();
         } catch (error) {
             setIsSubmitting(false)
             setError('An Unexpected error occurred, Kindly Try Again.');

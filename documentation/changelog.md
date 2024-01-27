@@ -1,6 +1,11 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.3.3 - Bug Fixes : Fixed static rendering issue of issues page.
+- This bug led to not updating the issues after adding/updating the issues.
+- so kind of added a manual page refresh.
+- Fixed api schema name import and its  usage.
+
 > 1.3.2 - Bug Fixes 
 - Tested and fixed redirection and conditional logic.
 
