@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.4.5 - Setting Up NextAuth 5: Styling Navbar.
+
 > 1.4.4 - Setting Up NextAuth 4: Adding login/logout.
 
 > 1.4.3 - Setting Up NextAuth 3: Prisma Adapter configuration.
