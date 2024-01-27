@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+
+> 1.3.8 - Integrated Delete api.
+- Added Error Handling as well.
+
 > 1.3.7 - Added Delete api.
 
 > 1.3.6 - Added Delete btn UI and alert.
