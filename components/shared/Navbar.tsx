@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 
+import { Skeleton } from '@/components';
 import { Avatar, Box, Container, DropdownMenu, Flex, Text } from '@radix-ui/themes';
 import classnames from 'classnames';
 import { useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 import { AiFillBug } from 'react-icons/ai';
+
 
 const Navbar = () => {
     return (
@@ -26,6 +28,8 @@ const Navbar = () => {
 
 export default Navbar;
 
+
+// self contained components.
 const NavLinks = () => {
     const currentActivePath = usePathname();
     const menu = [
@@ -48,11 +52,10 @@ const NavLinks = () => {
     )
 }
 
-// self contained components.
 const AuthStatus = () => {
     const { status, data: session } = useSession();
 
-    if (status === "loading") return null;
+    if (status === "loading") return <Skeleton width={'3rem'} />;
     if (status === "unauthenticated") return <Link href={'/api/auth/signin'}>Log In</Link>
     return (
         <Box>
