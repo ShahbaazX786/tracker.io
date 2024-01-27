@@ -20,3 +20,9 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+@layer utilities {
+  .nav-login-link {
+    @apply text-zinc-600 hover:text-slate-800 transition-colors font-normal p-4 rounded-md;
+  }
+}

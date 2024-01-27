@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.4.7- Setting Up NextAuth 7: Refactoring Navbar styles and code splitting.
+
 > 1.4.6 - Setting Up NextAuth 6: Adding Avatar in navbar.
 
 > 1.4.5 - Setting Up NextAuth 5: Styling Navbar.
