@@ -1,6 +1,12 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.3.4 - Bug Fixes : 
+- Fixed navigator not found errors due to static imports in server page. so added dynamic imports and turned off ssr to avoid making that a static page.
+- Fixed loading animations & skeletons.
+- Refactored the loading skeleton for issueform so that it can be reused.
+- Removed dynamic import from simpleMDE editor and added it to whole page instead as mde editor was loading lazily and other elements like title is loading eagerly thereby distrubing the loading experience..
+
 > 1.3.3 - Bug Fixes : Fixed static rendering issue of issues page.
 - This bug led to not updating the issues after adding/updating the issues.
 - so kind of added a manual page refresh.
