@@ -2,14 +2,19 @@
 
 
 
+> 1.4.1 - Setting Up NextAuth.
+- Installed NextAuth lib.
+- created a new route api/auth/[...nextauth]/route.ts [this ...nextauth route is used to handle all the nextauth related routes].
+- Added 2 new variables in .env file
+    - NEXTAUTH_URL.
+    - NEXTAUTH_SECRET.
+
 > 1.4.0 - Duplicate loading skeleton fix.
 - Moved the file hierarchy so that we don't have 2 loading.tsx in same, sub hierarchy.
-
 
 > 1.3.9 - Delete btn issue improvements.
 - Adding a loader to ensure network delay in deleting.
 - overall improving UX.
-
 
 > 1.3.8 - Integrated Delete api.
 - Added Error Handling as well.
