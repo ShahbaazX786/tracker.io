@@ -1,12 +1,12 @@
 "use client"
 
 import { Skeleton } from '@/components';
-import { User } from '@prisma/client';
+import { Issue, User } from '@prisma/client';
 import { Select } from '@radix-ui/themes';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-const AssignIssue = () => {
+const AssignIssue = ({ issue }: { issue: Issue }) => {
     const { data: users, error, isLoading } = useQuery<User[]>({
         queryKey: ['users'],
         queryFn: () => axios.get('/api/users').then(res => res.data),
@@ -17,13 +17,16 @@ const AssignIssue = () => {
     if (isLoading) return <Skeleton height={'1rem'} />;
 
     return (
-        <Select.Root>
+        <Select.Root onValueChange={(userId) => {
+             axios.patch('/api/issues/' + issue.id, { assignedToUserId: userId !== "unassigned" ? userId : null  })
+             }} defaultValue={issue.assignedToUserId || 'unassigned'}>
             <Select.Trigger placeholder='Assign...'>
             </Select.Trigger>
             <Select.Content>
                 <Select.Group>
                     <Select.Label>Available Users..</Select.Label>
                     {error && (<Select.Item key={'error'} value='error' className='text-red-500 font-semibold bg-red-100 p-1 rounded-sm'>Error!, Unable to load users</Select.Item>)}
+                    <Select.Item value={'unassigned'}>Unassigned</Select.Item>
                     {users?.map(user => <Select.Item key={user.id} value={user.id}>{user.name}</Select.Item>)}
                 </Select.Group>
             </Select.Content>
