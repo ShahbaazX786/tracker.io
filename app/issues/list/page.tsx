@@ -15,9 +15,9 @@ type tableColumnsType = {
 const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatus, orderBy: keyof Issue } }) => {
   const tableColumns: tableColumnsType[] = [
     { label: 'Issue', value: 'title' },
-    { label: 'Status', value: 'status', className: 'hidden sm:table-cell' },
+    { label: 'Status', value: 'status' },
     { label: 'Description', value: 'description', className: 'hidden sm:table-cell' },
-    { label: 'Created On', value: 'createdAt', className: 'hidden sm:table-cell' },
+    { label: 'Created On', value: 'createdAt', className: 'hidden md:table-cell' },
   ]
 
 
@@ -39,7 +39,7 @@ const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatu
         <Table.Header>
           <Table.Row>
             {tableColumns.map(c => (
-              <Table.ColumnHeaderCell key={c.value}><Link href={{
+              <Table.ColumnHeaderCell key={c.value} className={c.className}><Link href={{
                 query: { ...searchParams, orderBy: c.value }
               }}>{c.label}</Link>
                 {c.value === searchParams.orderBy && <ArrowUpIcon className='inline' />}
