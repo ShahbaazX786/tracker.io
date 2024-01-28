@@ -1,6 +1,13 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.2 - Utilizing react query.
+- Replaced usestate/useeffect childish code with tanstack query.
+- added error handling with config of tanstack query in assignIssue component.
+- Updated prisma models.
+- formatted prisma models.
+- migrated prisma model changes.
+
 > 1.5.1 - Setting up react query.
 - installed tanstack query and configured it as a provider and wrapped whole body content with it in layout.tsx file.
 
