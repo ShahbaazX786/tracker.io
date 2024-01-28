@@ -5,6 +5,7 @@ import { Issue, User } from '@prisma/client';
 import { Select } from '@radix-ui/themes';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { Toaster, toast } from 'react-hot-toast';
 
 const AssignIssue = ({ issue }: { issue: Issue }) => {
     const { data: users, error, isLoading } = useQuery<User[]>({
@@ -17,20 +18,23 @@ const AssignIssue = ({ issue }: { issue: Issue }) => {
     if (isLoading) return <Skeleton height={'1rem'} />;
 
     return (
-        <Select.Root onValueChange={(userId) => {
-             axios.patch('/api/issues/' + issue.id, { assignedToUserId: userId !== "unassigned" ? userId : null  })
-             }} defaultValue={issue.assignedToUserId || 'unassigned'}>
-            <Select.Trigger placeholder='Assign...'>
-            </Select.Trigger>
-            <Select.Content>
-                <Select.Group>
-                    <Select.Label>Available Users..</Select.Label>
-                    {error && (<Select.Item key={'error'} value='error' className='text-red-500 font-semibold bg-red-100 p-1 rounded-sm'>Error!, Unable to load users</Select.Item>)}
-                    <Select.Item value={'unassigned'}>Unassigned</Select.Item>
-                    {users?.map(user => <Select.Item key={user.id} value={user.id}>{user.name}</Select.Item>)}
-                </Select.Group>
-            </Select.Content>
-        </Select.Root>
+        <>
+            <Select.Root onValueChange={(userId) => {
+                axios.patch('/api/issues/' + issue.id, { assignedToUserId: userId !== "unassigned" ? userId : null }).then(()=>{toast.success('Changes saved Sucessfully!.')}).catch(() => { toast.error('Changes could not be saved.') })
+            }} defaultValue={issue.assignedToUserId || 'unassigned'}>
+                <Select.Trigger placeholder='Assign...'>
+                </Select.Trigger>
+                <Select.Content>
+                    <Select.Group>
+                        <Select.Label>Available Users..</Select.Label>
+                        {error && (<Select.Item key={'error'} value='error' className='text-red-500 font-semibold bg-red-100 p-1 rounded-sm'>Error!, Unable to load users</Select.Item>)}
+                        <Select.Item value={'unassigned'}>Unassigned</Select.Item>
+                        {users?.map(user => <Select.Item key={user.id} value={user.id}>{user.name}</Select.Item>)}
+                    </Select.Group>
+                </Select.Content>
+            </Select.Root>
+            <Toaster />
+        </>
     )
 }
 
