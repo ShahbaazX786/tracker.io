@@ -6,6 +6,7 @@ import './theme-config.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '../components/shared/Navbar';
+import QueryProvider from './QueryProvider';
 import NextAuthProvider from './auth/Provider';
 
 
@@ -29,16 +30,18 @@ export default function RootLayout({
     <html lang="en" >
       <body className={inter.variable}>
         {/* <Theme appearance="light" accentColor="violet" grayColor="slate" radius="full"></Theme> */}
-        <NextAuthProvider>
-          <Theme accentColor="violet" grayColor="slate" radius="medium">
-            <Navbar />
-            <main className='mx-auto py-8 px-4'>
-              <Container>
-                {children}
-              </Container>
-            </main>
-          </Theme>
-        </NextAuthProvider>
+        <QueryProvider>
+          <NextAuthProvider>
+            <Theme accentColor="violet" grayColor="slate" radius="medium">
+              <Navbar />
+              <main className='mx-auto py-8 px-4'>
+                <Container>
+                  {children}
+                </Container>
+              </main>
+            </Theme>
+          </NextAuthProvider>
+        </QueryProvider>
       </body>
     </html>
   )

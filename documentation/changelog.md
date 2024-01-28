@@ -1,6 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.1 - Setting up react query.
+- installed tanstack query and configured it as a provider and wrapped whole body content with it in layout.tsx file.
+
 > 1.5.0 - Implement Assign feature.
 - Added assignIssue dropdown component.
 - Added api for fetching user list and integrated it with assignIssue dropdown.
