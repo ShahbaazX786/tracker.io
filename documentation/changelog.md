@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.3 - Updated the api for patch to include support for optional updating of the title, description fields with the help of new patchIssueSchema.
+
 > 1.5.2 - Utilizing react query.
 - Replaced usestate/useeffect childish code with tanstack query.
 - added error handling with config of tanstack query in assignIssue component.
