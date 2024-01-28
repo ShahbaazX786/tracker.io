@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.8 - Added sorting of the issues table.
+
 > 1.5.7 - Added Filter for filtering the issues based on issue status.
 
 > 1.5.6 - Refactoring assignIssue.

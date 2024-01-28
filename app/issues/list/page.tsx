@@ -1,18 +1,35 @@
-import { IssueStatusBadge, Link } from '@/components';
+import { IssueStatusBadge } from '@/components';
 import prisma from '@/prisma/client';
+import Link from 'next/link'
 import { Table } from '@radix-ui/themes';
 import CreateActionBtn from '../list/createActionBtn';
-import { IssueStatus } from '@prisma/client';
+import { Issue, IssueStatus } from '@prisma/client';
+import { ArrowUpIcon } from '@radix-ui/react-icons';
 
-const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatus } }) => {
+type tableColumnsType = {
+  label: string;
+  value: keyof Issue;
+  className?: string;
+}
 
-  const verifyQuery = Object.values(IssueStatus);
-  const status = verifyQuery.includes(searchParams.status) ? searchParams.status : undefined;
+const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatus, orderBy: keyof Issue } }) => {
+  const tableColumns: tableColumnsType[] = [
+    { label: 'Issue', value: 'title' },
+    { label: 'Status', value: 'status', className: 'hidden sm:table-cell' },
+    { label: 'Description', value: 'description', className: 'hidden sm:table-cell' },
+    { label: 'Created On', value: 'createdAt', className: 'hidden sm:table-cell' },
+  ]
 
+
+  const verifyFilterQuery = Object.values(IssueStatus);
+  const status = verifyFilterQuery.includes(searchParams.status) ? searchParams.status : undefined;
+  const verifySortQuery = tableColumns.map(column => column.value);
+  const orderBy = verifySortQuery.includes(searchParams.orderBy) ? { [searchParams.orderBy]: 'asc' } : undefined;
   const issues = await prisma.issue.findMany({
     where: {
       status
-    }
+    },
+    orderBy
   });
 
   return (
@@ -21,10 +38,13 @@ const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatu
       <Table.Root variant='surface'>
         <Table.Header>
           <Table.Row>
-            <Table.ColumnHeaderCell>Issue</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell>Status</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell className='hidden sm:table-cell'>Description</Table.ColumnHeaderCell>
-            <Table.ColumnHeaderCell className='hidden md:table-cell'>Date</Table.ColumnHeaderCell>
+            {tableColumns.map(c => (
+              <Table.ColumnHeaderCell key={c.value}><Link href={{
+                query: { ...searchParams, orderBy: c.value }
+              }}>{c.label}</Link>
+                {c.value === searchParams.orderBy && <ArrowUpIcon className='inline' />}
+              </Table.ColumnHeaderCell>))
+            }
           </Table.Row>
         </Table.Header>
         <Table.Body>
