@@ -1,10 +1,11 @@
 import { IssueStatusBadge } from '@/components';
 import prisma from '@/prisma/client';
 import Link from 'next/link'
-import { Table } from '@radix-ui/themes';
+import { Flex, Table } from '@radix-ui/themes';
 import CreateActionBtn from '../list/createActionBtn';
 import { Issue, IssueStatus } from '@prisma/client';
 import { ArrowUpIcon } from '@radix-ui/react-icons';
+import Pagination from '@/components/shared/Pagination';
 
 type tableColumnsType = {
   label: string;
@@ -12,7 +13,15 @@ type tableColumnsType = {
   className?: string;
 }
 
-const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatus, orderBy: keyof Issue } }) => {
+interface Props {
+  searchParams: {
+    status: IssueStatus,
+    orderBy: keyof Issue,
+    page: string
+  }
+}
+
+const IssuesPage = async ({ searchParams }: Props) => {
   const tableColumns: tableColumnsType[] = [
     { label: 'Issue', value: 'title' },
     { label: 'Status', value: 'status' },
@@ -20,17 +29,27 @@ const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatu
     { label: 'Created On', value: 'createdAt', className: 'hidden md:table-cell' },
   ]
 
-
+  // filter issue status params
   const verifyFilterQuery = Object.values(IssueStatus);
   const status = verifyFilterQuery.includes(searchParams.status) ? searchParams.status : undefined;
+
+  //sort column params
   const verifySortQuery = tableColumns.map(column => column.value);
   const orderBy = verifySortQuery.includes(searchParams.orderBy) ? { [searchParams.orderBy]: 'asc' } : undefined;
+
+  //page params
+  const page = parseInt(searchParams.page) || 1;
+  const pageSize = 10;
+
+  const where = { status }
   const issues = await prisma.issue.findMany({
-    where: {
-      status
-    },
-    orderBy
+    where,
+    orderBy,
+    skip: (page - 1) * pageSize,
+    take: pageSize
   });
+
+  const issueCount = await prisma.issue.count({ where });
 
   return (
     <div className='w-full h-full px-6 my-6 space-y-5'>
@@ -58,6 +77,7 @@ const IssuesPage = async ({ searchParams }: { searchParams: { status: IssueStatu
           ))}
         </Table.Body>
       </Table.Root>
+      <Pagination currentPage={page} pageSize={pageSize} itemCount={issueCount} />
     </div>
   );
 };

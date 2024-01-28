@@ -1,7 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
-> 1.5.9- Fixing bugs.
+> 1.6.0 - Adding Pagination.
+
+> 1.5.9 - Fixing bugs.
 
 > 1.5.8 - Added sorting of the issues table.
 
