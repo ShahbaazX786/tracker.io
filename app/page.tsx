@@ -1,12 +1,12 @@
 "use client";
 
-import Pagination from "@/components/shared/Pagination";
+import LatestIssues from "@/components/LatestIssues";
 
-export default function Home({ searchParams }: { searchParams: { page: string } }) {
+export default function Home() {
   return (
     <>
-      <h1>Bismillah</h1>
-      <Pagination itemCount={100} pageSize={10} currentPage={parseInt(searchParams.page)} />
+      {/* <h1>Bismillah</h1> */}
+      <LatestIssues />
     </>
   )
 }

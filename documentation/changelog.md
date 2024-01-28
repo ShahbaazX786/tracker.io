@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.6.2 - Dashboard 1: Adding Latest Issues Component.
+
 > 1.6.1 - Refactoring issues page and getting out the table in it to a new component.
 
 > 1.6.0 - Adding Pagination.
