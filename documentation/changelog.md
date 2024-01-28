@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.4.9 - Setting Up NextAuth 9: Securing the API Endpoints using session from nex-auth.
+- refactored code a lil bit.
+- Added middleware to add route validation.
+
 > 1.4.8 - Setting Up NextAuth 8: Loading Skeleton in navbar.
 
 > 1.4.7 - Setting Up NextAuth 7: Refactoring Navbar styles and code splitting.
