@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.0 - Implement Assign feature.
+- Added assignIssue dropdown component.
+- Added api for fetching user list and integrated it with assignIssue dropdown.
+
 > 1.4.9 - Setting Up NextAuth 9: Securing the API Endpoints using session from nex-auth.
 - refactored code a lil bit.
 - Added middleware to add route validation.
