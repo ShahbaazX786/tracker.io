@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.5.6 - Refactoring assignIssue.
+
 > 1.5.5 - Added toast notification on assign user dropdown.
 
 > 1.5.4 - Added logic for issue assign and unassign. 
