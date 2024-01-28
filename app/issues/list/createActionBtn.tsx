@@ -7,7 +7,7 @@ const CreateActionBtn = () => {
     return (
         <div className='flex flex-col mt-4 sm:flex-row sm:mt-0 justify-between'>
             <Heading>All Issues</Heading>
-            <Flex mb={'5'} mt={{initial:"5", xs:'5', sm:'0'}} justify={'between'} wrap={'wrap'} gap={'3'}>
+            <Flex mt={{ initial: "5", xs: '5', sm: '0' }} justify={'between'} wrap={'wrap'} gap={'3'}>
                 <IssueStatusFilter />
                 <Button>
                     <FiPlusCircle size={15} />
