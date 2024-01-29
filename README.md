@@ -24,7 +24,7 @@
 
 ![Screen Shot](public/GithubDevFinder.png)
 
-Tracker.io is a best end to end Software as a service (SAAS) to help users manage their tasks / issues efficiency on their own.
+Tracker.io is a best Open source, end to end Software as a service (SAAS) to help users manage their tasks / issues efficiency on their own.
 
 This webapp utilizes best tech to provide a good SAAS user experience.
 
