@@ -32,6 +32,17 @@ Well worry no more.. Using this tool you can try out a variety of different user
 - Nextjs 14 (Reactjs)
 - Tailwind
 - Tanstack Query v5
+- Prisma
+- MySQL DB
+- Radix - UI
+- Next-Auth
+- Zod
+- Mini React Packages like: 
+  - React Hook forms
+  - React Icons
+  - EasyMde Editor
+  - React Hot Toast
+  - React Loading Skeleton
 
 ## Getting Started
 
