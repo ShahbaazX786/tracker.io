@@ -26,7 +26,7 @@
 
 Tracker.io is a best end to end Software as a service (SAAS) to help users manage their tasks / issues efficiency on their own.
 
-- This webapp utilizes best tech to provide a good SAAS user experience.
+This webapp utilizes best tech to provide a good SAAS user experience.
 
 ## Built With
 
@@ -61,7 +61,7 @@ Just head over the live demo link to test it out real quick.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/ShahbaazX786/Dev-Profile.git
+git clone https://github.com/ShahbaazX786/Tracker.io.git
 ```
 
 2. Install NPM packages
@@ -73,10 +73,10 @@ npm install
 3. Run the app.
 
 ```sh
-npm run bhag
+npm run s
 ```
 
-4. Head over to ```localhost:3000``` in your browser to play around with app in local.
+4. Head over to ```localhost:3000``` in your browser to play around with app in local. Or you can just go live here:
 
 ## Usage
 
@@ -85,7 +85,7 @@ This is built as a fun project using Github's Public API. and its sole purpose i
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShahbaazX786/Dev-Profile/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShahbaazX786/Tracker.io/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
 * Please also read through the Contribution.md before posting your first idea as well.
