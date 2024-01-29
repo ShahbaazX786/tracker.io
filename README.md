@@ -24,8 +24,9 @@
 
 ![Screen Shot](public/GithubDevFinder.png)
 
-Ever wondered if there is any user named bluffmaster? or asdf?. 
-Well worry no more.. Using this tool you can try out a variety of different usernames in github and actually see their real profile exists or not.
+Tracker.io is a best end to end Software as a service (SAAS) to help users manage their tasks / issues efficiency on their own.
+
+- This webapp utilizes best tech to provide a good SAAS user experience.
 
 ## Built With
 
