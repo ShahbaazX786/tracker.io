@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<br/>
+<p align="center">
+  <a href="https://github.com/Shahbaazx786/Dev-Profile-Finder">
+    <img src="public/search.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Tracker.io</h3>
+
+  <p align="center">
+    One of the best way to track the status of issues. All in one place.
+    <br/>
+    <br/>
+    <a href="https://tracker.io-neon.vercel.app/">Live Demo</a>
+    .
+    <a href="https://github.com/ShahbaazX786/Tracker.io/issues">Report Bug</a>
+    .
+    <a href="https://github.com/ShahbaazX786/Tracker.io/issues">Request Feature</a>
+  </p>
+</p>
+
+
+
+## About The Project
+
+![Screen Shot](public/GithubDevFinder.png)
+
+Ever wondered if there is any user named bluffmaster? or asdf?. 
+Well worry no more.. Using this tool you can try out a variety of different usernames in github and actually see their real profile exists or not.
+
+## Built With
+
+- Nextjs 14 (Reactjs)
+- Tailwind
+- Tanstack Query v5
 
 ## Getting Started
 
-First, run the development server:
+Just head over the live demo link to test it out real quick.
+- However if you want to experience it in detail then go ahead and clone it in your pc.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### Prerequisites
+
+###### Your pc will need these in order to run this project:
+- Nodejs 18+.
+- Vs code.
+
+### Installation
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/ShahbaazX786/Dev-Profile.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install NPM packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Run the app.
 
-## Learn More
+```sh
+npm run bhag
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Head over to ```localhost:3000``` in your browser to play around with app in local.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This is built as a fun project using Github's Public API. and its sole purpose is to be an educational project.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShahbaazX786/Dev-Profile/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* Please make sure you check your spelling and grammar.
+* Create individual PR for each suggestion.
+* Please also read through the Contribution.md before posting your first idea as well.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Creating A Pull Request
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request<br/>
+<p align="center">
