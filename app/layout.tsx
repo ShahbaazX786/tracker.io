@@ -8,6 +8,7 @@ import { Inter } from 'next/font/google';
 import Navbar from '../components/shared/Navbar';
 import QueryProvider from './QueryProvider';
 import NextAuthProvider from './auth/Provider';
+import Footer from '@/components/shared/Footer';
 
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({
                   {children}
                 </Container>
               </main>
+              <Footer />
             </Theme>
           </NextAuthProvider>
         </QueryProvider>
