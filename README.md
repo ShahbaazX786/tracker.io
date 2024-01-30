@@ -1,13 +1,13 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Shahbaazx786/Dev-Profile-Finder">
-    <img src="public/search.png" alt="Logo" width="80" height="80">
+    <img src="public/Tracker.io-Main-Logo.png" alt="Logo" width="250" height="100">
   </a>
 
-  <h3 align="center">Tracker.io</h3>
+  <!-- <h3 align="center">Tracker.io</h3> -->
 
   <p align="center">
-    One of the best way to track the status of issues. All in one place.
+    One of the best way to track your issues. All in one place.
     <br/>
     <br/>
     <a href="https://tracker.io-neon.vercel.app/">Live Demo</a>
