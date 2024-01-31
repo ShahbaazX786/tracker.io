@@ -3,11 +3,12 @@ import "@radix-ui/themes/styles.css";
 import "./globals.css";
 import "./theme-config.css";
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "../components/shared/Navbar";
-import QueryProvider from "./QueryProvider";
-import NextAuthProvider from "./auth/Provider";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Navbar from '../components/shared/Navbar';
+import QueryProvider from './QueryProvider';
+import NextAuthProvider from './auth/Provider';
+import Footer from '@/components/shared/Footer';
 
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
               <main className='mx-auto py-8 px-4'>
                 <Container>{children}</Container>
               </main>
+              <Footer />
             </Theme>
             </ThemeProvider>
           </NextAuthProvider>
