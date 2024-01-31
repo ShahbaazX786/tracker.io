@@ -1,6 +1,6 @@
-"use client";
+// "use client";
 
-import LatestIssues from "@/components/LatestIssues";
+import LatestIssues from '@/components/LatestIssues';
 
 export default function Home() {
   return (
@@ -8,5 +8,5 @@ export default function Home() {
       {/* <h1>Bismillah</h1> */}
       <LatestIssues />
     </>
-  )
+  );
 }
