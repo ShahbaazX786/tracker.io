@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import LatestIssues from "@/components/LatestIssues";
 

@@ -8,6 +8,7 @@ import classnames from 'classnames';
 import { useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
 import { AiFillBug } from 'react-icons/ai';
+import DarkModeSwitch from './DarkModeSwitch';
 
 
 const Navbar = () => {
@@ -20,6 +21,7 @@ const Navbar = () => {
                         <NavLinks />
                     </Flex>
                     <AuthStatus />
+                    <DarkModeSwitch />
                 </Flex>
             </Container>
         </nav>
