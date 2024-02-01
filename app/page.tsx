@@ -1,5 +1,4 @@
-// "use client";
-
+import AllIssuesStatus from '@/components/AllIssuesStatus';
 import LatestIssues from '@/components/LatestIssues';
 
 export default function Home() {
@@ -7,6 +6,7 @@ export default function Home() {
     <>
       {/* <h1>Bismillah</h1> */}
       <LatestIssues />
+      <AllIssuesStatus />
     </>
   );
 }
