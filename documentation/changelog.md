@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.2 - Perf: Using cache in react to store/cache the value instead of making 2 api/db calls for the same value.
+
 > 1.7.1 - Adding Metadata for better SEO.
 - Using metadata const for statis metadata.
 - Using generateMetadata method of next for dynamic metadata.
