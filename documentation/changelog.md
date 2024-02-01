@@ -1,6 +1,10 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.1 - Adding Metadata for better SEO.
+- Using metadata const for statis metadata.
+- Using generateMetadata method of next for dynamic metadata.
+
 > 1.7.0 - Refactoring Dashboard layout
 
 > 1.6.9 - Added IssueChart component - To View the status of all issues in an analytical graphical view. 

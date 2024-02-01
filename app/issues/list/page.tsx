@@ -4,6 +4,7 @@ import { IssueStatus } from '@prisma/client';
 import { Flex } from '@radix-ui/themes';
 import CreateActionBtn from '../list/createActionBtn';
 import IssueTable, { IssuePageQuery, columnNames } from './IssueTable';
+import { Metadata } from 'next';
 
 
 interface Props {
@@ -43,5 +44,10 @@ const IssuesPage = async ({ searchParams }: Props) => {
 
 // this fix is enables this file to not be a static page in prod build.
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Tracker.io - Issue List',
+  description: 'View all your issues',
+};
 
 export default IssuesPage;
