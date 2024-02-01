@@ -19,7 +19,7 @@ const AllIssuesStatus = async () => {
         ];
 
     return (
-        <Flex gap={'4'} my={'4'}>
+        <Flex gap={'4'}>
             {Allstatus.map((s) => (
                 <Card key={s.label}>
                     <Flex direction={'column'}>
