@@ -1,6 +1,8 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.3 - Security: Added an env.example file to know the structure of real env file.
+
 > 1.7.2 - Perf: Using cache in react to store/cache the value instead of making 2 api/db calls for the same value.
 
 > 1.7.1 - Adding Metadata for better SEO.
