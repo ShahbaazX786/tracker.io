@@ -1,6 +1,12 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.4 - Deployment
+- Change prisma config object to include relationMode:'prisma' as this will avoid foreign key constraints in the schema.
+- after changing this delete the existing migrations in prisma folder and run the migration command again.
+- npx prisma migrate dev . then click yes and give a name to initial migration.
+- your sql should be running in localhost according to the .env file to make this command work.
+
 > 1.7.3 - Security: Added an env.example file to know the structure of real env file.
 
 > 1.7.2 - Perf: Using cache in react to store/cache the value instead of making 2 api/db calls for the same value.
