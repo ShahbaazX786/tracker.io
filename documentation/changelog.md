@@ -1,6 +1,9 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.4.2 - Fixing Deployment Issue #1.
+- Added a postinstall script for prisma generate.
+
 > 1.7.4 - Deployment
 - Change prisma config object to include relationMode:'prisma' as this will avoid foreign key constraints in the schema.
 - after changing this delete the existing migrations in prisma folder and run the migration command again.
