@@ -28,8 +28,10 @@ const Navbar = () => {
             </Link>
             <NavLinks />
           </Flex>
-          <AuthStatus />
-          <DarkModeSwitch />
+          <Flex justify={'between'} align={'center'} gap={'4'}>
+            <DarkModeSwitch />
+            <AuthStatus />
+          </Flex>
         </Flex>
       </Container>
     </nav>

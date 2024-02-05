@@ -1,5 +1,7 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
+> 2.0.0 - Initial commit of v2.
+- Documentation update.
 
 > 1.7.4.5 - Fixing Deployment Issue #3.
 - removing relationMode as this was only needed in planetscale (as it doesn't support foreign key constraints).

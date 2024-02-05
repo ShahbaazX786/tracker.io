@@ -10,7 +10,7 @@
     One of the best way to track your issues. All in one place.
     <br/>
     <br/>
-    <a href="https://tracker.io-neon.vercel.app/">Live Demo</a>
+    <a href="https://tracker-io-wheat.vercel.app/">Live Demo</a>
     .
     <a href="https://github.com/ShahbaazX786/Tracker.io/issues">Report Bug</a>
     .
@@ -44,6 +44,8 @@ This webapp utilizes best tech to provide a good SAAS user experience.
   - EasyMde Editor
   - React Hot Toast
   - React Loading Skeleton
+- Supabase for db.
+- Vercel for Hosting.
 
 ## Getting Started
 
