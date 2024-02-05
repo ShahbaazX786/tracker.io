@@ -1,6 +1,13 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.4.3 - Fixing Deployment Issue #2.
+- Changing db provider from planetscale to supabase.
+- changing db from mysql to postgresql.
+- executed prisma migrate db pull.
+- created prisma migrate dev.
+- executed prisma migrate db push.
+
 > 1.7.4.2 - Fixing Deployment Issue #1.
 - Added a postinstall script for prisma generate.
 
