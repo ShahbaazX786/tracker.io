@@ -1,6 +1,13 @@
 ### Tracker.io - A Issue Tracker app made with Nextjs.
 
 
+> 1.7.4.5 - Fixing Deployment Issue #3.
+- removing relationMode as this was only needed in planetscale (as it doesn't support foreign key constraints).
+- As now we are using supabase. so i think it supports foreign key constraints. Hence this change.
+- Ran the following commands after updating schema:
+    - npx prisma migrate dev.
+    - npx prisma db push.
+
 > 1.7.4.3 - Fixing Deployment Issue #2.
 - Changing db provider from planetscale to supabase.
 - changing db from mysql to postgresql.
