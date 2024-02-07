@@ -7,7 +7,7 @@
   <!-- <h3 align="center">Tracker.io</h3> -->
 
   <p align="center">
-    One of the best way to track your issues. All in one place.
+    The best way to track your issues, all in one place.
     <br/>
     <br/>
     <a href="https://tracker.io-neon.vercel.app/">Live Demo</a>
@@ -24,47 +24,48 @@
 
 ![Screen Shot](public/GithubDevFinder.png)
 
-Tracker.io is a best Open source, end to end Software as a service (SAAS) to help users manage their tasks / issues efficiency on their own.
+Tracker.io is an open-source, end-to-end, Software-as-a-Service (SaaS) solution for helping users manage their tasks/issues efficiently on their own.
 
-This webapp utilizes best tech to provide a good SAAS user experience.
+This web application uses the best tech available to provide a clean and efficient user experience. 
 
 ## Built With
 
-- Nextjs 14 (Reactjs)
+- Next.js 14 (React.js)
 - Tailwind
-- Tanstack Query v5
+- TanStack Query v5
 - Prisma
-- MySQL DB
-- Radix - UI
-- Next-Auth
+- MySQL
+- Radix UI
+- NextAuth.js
 - Zod
-- Mini React Packages like: 
-  - React Hook forms
+- Smaller React packages such as: 
+  - React Hook Form
   - React Icons
-  - EasyMde Editor
+  - EasyMDE Editor
   - React Hot Toast
   - React Loading Skeleton
 
 ## Getting Started
 
-Just head over the live demo link to test it out real quick.
-- However if you want to experience it in detail then go ahead and clone it in your pc.
+To test it out, click on the [Live Demo](https://tracker.io-neon.vercel.app) link.
+
+If you want to experience it in detail, I recommend you clone the repository to your PC. 
 
 ### Prerequisites
 
-###### Your pc will need these in order to run this project:
-- Nodejs 18+.
-- Vs code.
+###### Your PC will need the following in order to run this project:
+- Node.js version 18 or later.
+- VS Code.
 
 ### Installation
 
-1. Clone the repo
+1. Clone this repository.
 
 ```sh
 git clone https://github.com/ShahbaazX786/Tracker.io.git
 ```
 
-2. Install NPM packages
+2. Install NPM packages.
 
 ```sh
 npm install
@@ -76,25 +77,27 @@ npm install
 npm run s
 ```
 
-4. Head over to ```localhost:3000``` in your browser to play around with app in local. Or you can just go live here:
+4. To play around with the app locally, head over to ```localhost:3000``` in your browser.
+
+   Or you can just go live here:
 
 ## Usage
 
-This is built as a fun project using Github's Public API. and its sole purpose is to be an educational project.
+This project was built for fun using the GitHub REST API. It is for educational purposes only. 
 
-## Contributing
+## Tips for Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShahbaazX786/Tracker.io/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
-* Please make sure you check your spelling and grammar.
-* Create individual PR for each suggestion.
-* Please also read through the Contribution.md before posting your first idea as well.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShahbaazX786/Tracker.io/issues/new) to discuss it. You can also create a pull request after editing the *README.md* file with the necessary changes.
+* Check your spelling and grammar.
+* Create an individual pull request for each suggestion.
+* Read through the Contribution.md before posting your first idea.
 
-### Creating A Pull Request
+### Creating a Pull Request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request<br/>
+1. Fork the project.
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push your changes to the branch: `git push origin feature/AmazingFeature`
+5. Open a pull request.<br/>
 <p align="center">
